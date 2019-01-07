@@ -1,0 +1,215 @@
+--------------------------------------------------------------
+--- This file contains your answers to questions for Assignment 1.
+--- Submit this file via 'give' along with your results files. 
+--- When completing your answers in this file please remember
+--- the following rules:
+--- (1) Lines starting with --- are comments. AUTOMARKING WILL
+---     IGNORE THEM. To select your answer for a given question
+---     you need to delete the --- on the corresponding line.
+--- (2) Lines starting with *** are used by automarking. DO NOT
+---     REMOVE OR MODIFY ANY OF THESE LINES UNLESS EXPLICTLY
+---     INSTRUCTED TO DO SO.
+--------------------------------------------------------------
+*** COMP9417 18s1: Assignment 1 answers
+*** Last revised: Fri 23 Mar 16:30:25 AEDT 2018
+--- 
+--- Please add your details on the next two lines.
+*** Student Name:
+*** Student Number: 
+--------------------------------------------------------------
+
+*** ANSWERS:
+---  Please provide answers to each question as specified. Other
+---  text will be ignored. Please only uncomment the line containing
+---  your answers and do not change any other text. Each question
+---  should have exactly ONE answer. Any questions with more than
+---  one answer uncommented will receive ZERO marks. For each question
+---  your answers should reflect your knowledge of the learning algorithms
+---  applied, and the results obtained on the datasets used.
+
+--------------------------------------------------------------
+*** QUESTION 1
+--- For this question "results" means the results you saved in "q1.out".
+
+*** Question 1(a) [2 marks]
+--- This question has two multiple-choice parts, each worth 1 mark.
+
+*** Part 1:
+--- Looking at the results for BOTH the Nearest Neighbour and
+--- Decision Tree learning algorithms over all the datasets, I
+--- observed the following regarding a possible "learning curve"
+--- effect due to increasing the size of the training set:
+
+--- (1) on some datasets error is reduced, i.e., some show a learning curve
+--- (2) on most datasets error is reduced, i.e., most show a learning curve
+--- (3) on all datasets error is reduced, i.e., all show a learning curve
+--- (4) error was basically unchanged, i.e., no learning curve
+--- (5) Decision Trees are better than Nearest Neighbour learning algorithms 
+
+*** Part 2:
+--- Looking at the results for BOTH the Nearest Neighbour and
+--- Decision Tree learning algorithms on error reduction relative to default
+--- as the size of the training set is increased , it appears that:
+
+--- (1) there can be exceptions to a general pattern of error reduction that may reflect some properties of the dataset
+--- (2) if a learning algorithm does not reduce error then there is a problem with the algorithm
+--- (3) any learning learning algorithm will reduce error, given enough data
+--- (4) any learning learning algorithm will reduce error, given enough time
+
+*** Question 1(b) [4 marks]
+--- First, insert your error reduction numbers in the table below (refer to
+--- the assignment notebook for details on how to calculate these).
+--- In particular, in each of the 4 cells in the table, substitute
+--- the respective numbers you calculated for the phrase "My number".
+--- PLEASE ENSURE YOU DO NOT MODIFY ANY OTHER PART OF THE TABLE ! 
+--- The completed table is worth 2 marks.
+
+********************************************************************************
+***                 Mean error reduction relative to default
+********************************************************************************
+*** Algorithm            After 10% training	After 100% training
+********************************************************************************
+*** Nearest Neighbour      My number              My number      
+*** Decision Tree          My number              My number      
+********************************************************************************
+
+--- The rest of this question has two multiple-choice parts, each worth 1 mark.
+
+*** Part 1:
+--- Comparing the Nearest Neighbour and Decision Tree learning
+--- algorithms based on your numbers on mean error reduction
+--- relative to default on only 10% of the data I observe that:
+
+--- (1) 10% of the data is not enough for learning a good model
+--- (2) only the Decision Tree learner reduces error with 10% of the data
+--- (3) only the Nearest Neighbour learner reduces error with 10% of the data
+--- (4) both algorithms learn models that reduce error by more than 20% with 10% of the data
+
+*** Part 2:
+--- From my knowledge of how the Nearest Neighbour and Decision Tree
+--- learning algorithms work I suggest the following explanation for
+--- the results in the table:
+
+--- (1) Decision Trees cannot reduce error enough
+--- (2) Nearest Neighbour cannot reduce error enough
+--- (3) Nearest Neighbour may be overfitting some of the datasets 
+--- (4) Decision Trees may be overfitting some of the datasets
+--- (5) Deep Learning will definitely do better with less data
+
+--------------------------------------------------------------
+*** QUESTION 2
+--- For this question "results" means the results you saved in "q2.out".
+
+*** Question 2(a) [2 marks] 
+--- This question has two multiple-choice parts, each worth 1 mark.
+
+*** Part 1:
+--- Looking at the results on percent accuracy for tree learning on
+--- these datasets, the largest decreases in accuracy usually occurr
+--- when moving from:
+
+--- (1) zero to low levels of added noise
+--- (2) low to medium levels of added noise
+--- (3) medium to high levels of added noise
+--- (4) zero to low or medium levels of added noise
+--- (5) low to medium or high levels of added noise
+
+*** Part 2:
+--- In decision tree learning, the parameter "min_samples_leaf"
+--- places a lower bound on the number of training set examples that
+--- can appear at any leaf of the decision tree. This data is used
+--- during learning to assign a decision to that leaf, e.g., by
+--- assigning the leaf to predict the majority class of the training
+--- set examples at the leaf. By increasing the value of the
+--- "min_samples_leaf" parameter we can expect this to:
+
+--- (1) decrease overfitting by decreasing the number of examples at any leaf
+--- (2) decrease overfitting by increasing the number of examples at any leaf
+--- (3) increase overfitting by decreasing the number of examples at any leaf
+--- (4) increase overfitting by increasing the number of examples at any leaf
+
+*** Question 2(b) [1 mark]
+--- Looking the results on percent accuracy and value of the
+--- "min_samples_leaf" returned by the search for the 50% added
+--- noise condition compare to default, we can conclude that:
+
+--- (1) on some of the data sets, parameter selection increased overfitting
+--- (2) on some of the data sets, parameter selection reduced overfitting
+--- (3) parameter selection did not reduce overfitting on any of the data sets,
+--- (4) for 50% added noise, parameter selection reduced overfitting 
+--- (5) over all data sets, parameter selection reduced overfitting
+
+--------------------------------------------------------------
+*** QUESTION 3
+--- For this question "results" means the results you saved in "q3.out".
+
+*** Question 3(a) [2 marks]
+--- This question has two multiple-choice parts, each worth 1 mark.
+
+*** Part 1:
+--- By applying a log transform to the class variable "median house
+--- value" and comparing the RMSE to that of the regression before
+--- the transform we observe in the results the following effect:
+
+--- (1) RMSE was basically unchanged
+--- (2) RMSE decreased by 2 orders of magnitude
+--- (3) RMSE decreased by 5 orders of magnitude
+--- (4) RMSE increased slightly
+--- (5) RMSE increased by 4 orders of magnitude
+
+*** Part 2:
+--- I experimented with one or two other transformations to the
+--- variables but none of these changed RMSE as much as the log
+--- transform to the class variable:
+
+--- (1) True
+--- (2) False
+
+*** Question 3(b) [1 mark]
+--- The effect observed in the results following the log transform
+--- to the class variable "median house value" can be interpreted as
+--- meaning that:
+
+--- (1) the multivariate regression problem has been regularised
+--- (2) the transformed target variable has been scaled to have zero mean and unit variance
+--- (3) random noise has been removed from the transformed target variable 
+--- (4) the transformed target variable has an approximately linear relationship with the other variables
+--- (5) the transformed target variable has been assigned a uniform prior
+
+--------------------------------------------------------------
+*** QUESTION 4 [2 marks]
+--- For this question "results" means the results you saved in "q4.out".
+--- This question has two multiple-choice parts, each worth 1 mark.
+
+*** Part 1:
+--- From your knowledge of how text data is represented in machine
+--- learning as a "bag-of-words", and referring to the
+--- CountVectorizer pre-processing method in the sklearn
+--- documentation, answer the following question about how we have
+--- used it to transform the original text data. For this text
+--- classification problem, CountVectorizer pre-processing was
+--- applied to the snippet data to:
+
+--- (1) generate the vocabulary and count the frequency of words independently for the training and test sets
+--- (2) generate the vocabulary and count the frequency of words overall for the combined training and test sets
+--- (3) generate the vocabulary overall for the combined training and test sets, and count the frequency of words independently for the training and test sets
+--- (4) generate the vocabulary independently for the training and test sets, and count the frequency of words overall for the combined training and test sets
+
+*** Part 2:
+--- Given the large numbers of words and tokens that apear in
+--- typical natural language data, text classification learning
+--- problems are usually very high-dimensional. Feature selection is
+--- designed to improve the classification performance of machine
+--- learning algorithms by reducing the number of irrelevant
+--- features that could be included in a predictive model.  From
+--- your results, select an explanation for the effect of feature
+--- selection on the performance of Multinomial Naive Bayes on the
+--- snippet classification dataset:
+
+--- (1) Multinomial Naive Bayes is rarely used for text classification
+--- (2) the class-conditional probabilities for most of the words are relevant to classification 
+--- (3) text classification is not possible using just the class-conditional probabilities of the words
+--- (4) the prior probabilities of the class labels will dominate the the class-conditional probabilities of the words
+
+*** END
+--------------------------------------------------------------
